@@ -4,9 +4,16 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+body {
+    background-image: url("illustration-rock-concert-band-is-playing-stage-crowd-is-excited-is-raising-their-hands-air_14117-450182.jpg");
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+}
 #nav{
     height: 70px;
-    background-color: red;
+    background-color:transparent;
     display: flex;
     justify-content: space-between;
 }
@@ -52,15 +59,105 @@
 .nav_options a{
     font-family: "Bitcount Prop Single", system-ui;
     color: white;
+    font-size: 1.3rem;
     text-decoration: none;
     margin: 2px;
 }
+.small_screen_btn{
+    display: flex;
+    height: 70px;
+    width: 70px;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    display: none;
+}
+.small_screen_btn button{
+    background-color: transparent;
+    height: 35px;
+    width: 35px;
+    border: 1px solid black;
+    background-color: rgba(54, 50, 50, 0.779);
+    border-radius: 6px;
+}
+.small_screen_btn button i{
+    font-size: 1rem;
+    color: white;
+}
 
-@media screen and (max-width: 685px){
+@media screen and (max-width: 859px){
     .nav_options{
         display: none;
     }
     .nav_btn{
         display: none;
     }
+    .small_screen_btn{
+        display: flex;
+    }
+}
+
+
+#menuBtn {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.popup {
+    
+    display: none;   
+    position: absolute;
+    margin-top: 8px;
+    background-color: rgba(0, 0, 0, 0.922);
+    border:none;
+    height: 70%;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.popup a {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 1.3rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 6px 0;
+    margin-bottom: 20px;
+}
+
+.popup a:hover {
+    background-color: rgba(30, 30, 30, 0.922);
+}
+
+.login {
+    border-top: 1px solid rgba(128, 128, 128, 0.639);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.login button { 
+    font-size: 1.3rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    text-align: start;
+}
+.login button:first-child{
+    font-family: "Bitcount Prop Single", system-ui;
+}
+.login #register{
+    width: 95%;
+    height: 40px;
+    padding-left: 20px;
+    text-align: center;
 }
